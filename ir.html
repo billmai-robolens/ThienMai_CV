@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooking Robot System — Nhat Thien Mai</title>
+<meta name="description" content="Four simulated robot arms that fetch, chop, cook and plate a meal, with a hardware e-stop, light curtain and collision avoidance. Industrial Robotics, UTS 2025.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <span class="nm-mast-status nm-label">No. 06 / Cooking robots</span>
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#work" aria-current="page">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-12);row-gap:var(--space-8)">
+    <span class="nm-label" style="grid-column:1 / span 3"><a class="nm-link" href="index.html#work">← Index</a> &nbsp;/&nbsp; Project 06</span>
+    <h1 class="nm-display" style="grid-column:1 / span 10">Four robot arms that cook dinner, <span class="nm-em">and stop for people</span></h1>
+    <p class="nm-lede" style="grid-column:1 / span 7">Industrial Robotics (41013), team of three. The brief asked for a pick-and-place robot system for the home or workplace with safety built in. We built a robot kitchen in the Swift simulator where four arms fetch food from a fridge, chop it, cook it and plate it. I wrote the motion code for all four robots, modelled the CAD meshes and put the whole environment together.</p>
+    <dl class="nm-specs" style="grid-column:9 / span 4"><div><dt>Role</dt><dd>Robot motion · CAD · simulation</dd></div><div><dt>When</dt><dd>Aug — Oct 2025</dd></div><div><dt>Stack</dt><dd>Python · Robotics Toolbox · Swift · Arduino</dd></div><div><dt>Robots</dt><dd>Linear RV-5AS · Linear UR3 · iiwa 7 · CRB 1300</dd></div></dl>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-bottom:var(--space-18)">
+    <div style="grid-column:1 / span 9">
+      <figure class="nm-figure"><div class="nm-video" data-yt="V7YZgCpBRsI" style="background-image:url(https://i.ytimg.com/vi/V7YZgCpBRsI/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/V7YZgCpBRsI" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      <figcaption><span class="nm-label">Vid. 00</span><span class="nm-cap">Final video: the full cooking sequence, the safety systems and the hardware e-stop.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>01</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">The brief: <span class="nm-em">a helpful robot that is safe to stand next to</span></h2><p class="nm-body">SafeCo, the fictional client, wanted to sell small robot systems for homes and workplaces. Every group had to use one arm from the Robotics Toolbox plus one new 6-DOF-or-more industrial arm per student, all working in one shared workspace.</p><p class="nm-body">The system needed a teach GUI with joint and Cartesian jogging, an e-stop in both hardware and software where resuming takes two separate actions, safety equipment in the scene, a reaction to a simulated sensor, and active avoidance of a collision we forced into the robot’s path.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Subject</dt><dd>41013 Industrial Robotics · UTS</dd></div><div><dt>Delivered</dt><dd>Live demo · 3-minute video · code viva</dd></div><div><dt>Arms</dt><dd>4 in one workspace</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>02</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">The kitchen line</h2><p class="nm-body">The meal moves down a line of four arms. The Linear RV-5AS opens the fridge cabinets and takes out steak, carrots and asparagus. The iiwa 7 chops the carrots on the board in two lanes. The CRB 1300 cooks with the frying pan and plates the food. The Linear UR3 carries food and plates between the stations.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Fridge</dt><dd>Linear RV-5AS</dd></div><div><dt>Chop</dt><dd>KUKA iiwa 7</dd></div><div><dt>Cook & plate</dt><dd>ABB CRB 1300</dd></div><div><dt>Carry</dt><dd>Linear UR3</dd></div></dl>
+      <div class="nm-case-wide" style="margin-top:var(--space-6)"><ol class="nm-states"><li><span class="nm-state">Fridge<small>RV-5AS on rail</small></span></li><li><span class="nm-state">Chop<small>iiwa 7</small></span></li><li><span class="nm-state">Cook<small>CRB 1300</small></span></li><li><span class="nm-state">Serve<small>UR3 on rail</small></span></li></ol></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>03</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">My arm: <span class="nm-em">a Mitsubishi RV-5AS on a 1.7 m rail</span></h2><p class="nm-body">My new robot was a Mitsubishi RV-5AS six-axis arm mounted on a linear rail, which makes it a 7-DOF robot that can reach all three fridge shelves. I wrote its standard DH model, a prismatic first joint with 1.7 m of travel and then the six revolute joints, and modelled a CAD mesh for every link.</p><p class="nm-body">Each mesh is aligned to its DH frame through a test pose and per-link transforms in a scaled 3D robot class, so the rendered arm moves exactly with the kinematic model. I also rebuilt the UR3’s rail to a fixed length to fit the kitchen.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>DOF</dt><dd>7 (rail + 6 revolute)</dd></div><div><dt>Rail travel</dt><dd>1.7 m</dd></div><div><dt>DH offsets</dt><dd>d₁ 0.324 · d₄ 0.5 · d₆ 0.125 m</dd></div><div><dt>Meshes</dt><dd>1 per link, plus rail and slider</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>04</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Motion: <span class="nm-em">IK for poses, RMRC for straight lines</span></h2><p class="nm-body">Inverse kinematics finds the joint configuration at each cabinet handle and each pick and drop pose. Moves between free-space waypoints use joint-space trajectories (jtraj). Opening and closing a cabinet door needs the hand to follow a straight line, so those moves use resolved-rate motion control (RMRC), with separate solvers for the 6-DOF and 7-DOF arms.</p><p class="nm-body">One shared move function drives every robot, so the e-stop, the light curtain and collision checks apply to all four arms at each step.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Free space</dt><dd>jtraj between IK poses</dd></div><div><dt>Straight lines</dt><dd>RMRC · 6- and 7-DOF</dd></div><div><dt>Control loop</dt><dd>one shared move function</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>05</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Safety: <span class="nm-em">four ways to stop, one way to resume</span></h2><p class="nm-body"><strong>Hardware e-stop:</strong> an Arduino button sends a stop over serial and every arm freezes immediately. Releasing it only <em>requests</em> a resume, which must then be confirmed in the GUI: two separate actions, as the brief required.</p><p class="nm-body"><strong>Light curtain:</strong> a simulated person walks towards the kitchen entrance. When their body crosses the curtain zone, the robots stop.</p><p class="nm-body"><strong>Collision avoidance:</strong> an obstacle can be dropped into a robot’s path. The planner checks every link against it with line–triangle intersection tests along a path interpolated at 1° steps. If a collision is predicted, it searches for collision-free joint states above the floor and replans around the obstacle instead of just stopping.</p><p class="nm-body"><strong>Vision:</strong> a RealSense camera watches for red objects, standing in for fire, and triggers the e-stop.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>E-stop</dt><dd>Arduino serial + GUI · 2-step resume</dd></div><div><dt>Sensor</dt><dd>Light curtain at the entrance</dd></div><div><dt>Avoidance</dt><dd>Link checks · 1° steps · replan</dd></div><div><dt>Scene</dt><dd>Fence · light curtain · extinguisher</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>06</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Teach GUI</h2><p class="nm-body">The GUI jogs any of the four robots joint by joint with sliders, or in Cartesian space (x, y, z and roll, pitch, yaw), checks joint limits before each step, and carries the software e-stop and resume buttons that stay in sync with the hardware button.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Jog</dt><dd>Joint sliders · Cartesian xyz + rpy</dd></div><div><dt>Limits</dt><dd>Checked before each step</dd></div><div><dt>E-stop</dt><dd>Synced with hardware</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-18);border-top:1px solid var(--rule-strong)">
+    <span class="nm-label" style="grid-column:1 / span 3;padding-top:var(--space-3)">Next / 01</span>
+    <a class="nm-card" href="warman.html" style="grid-column:4 / span 9">
+      <div class="nm-card-meta" style="border-top:0;margin-top:0;padding-top:0"><span class="nm-label nm-card-no">01</span><h3 class="nm-card-title" style="font-size:clamp(32px,4vw,56px)">Warman 2026: a lifting arm that <i>reaches 720 mm</i></h3><span class="nm-card-arrow" style="font-size:48px">→</span></div>
+    </a>
+  </section>
+</div>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('.nm-video[data-yt]');
+  if (!boxes.length) return;
+  function cmd(f, fn) { try { f.contentWindow.postMessage(JSON.stringify({event: 'command', func: fn, args: []}), '*'); } catch (e) {} }
+  function load(box) {
+    var id = box.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&loop=1&playlist=' + id + '&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';
+    f.title = 'Project video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.appendChild(f); box.classList.add('is-loaded'); return f;
+  }
+  boxes.forEach(load);
+})();
+</script>
+</body>
+</html>

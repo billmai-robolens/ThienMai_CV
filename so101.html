@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SO-101 arm — Nhat Thien Mai</title>
+<meta name="description" content="An SO-101 robot arm taught pick-and-place by demonstration, using the LeRobot framework and imitation learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <span class="nm-mast-status nm-label">No. 02 / SO-101 arm</span>
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#work" aria-current="page">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-12);row-gap:var(--space-8)">
+    <span class="nm-label" style="grid-column:1 / span 3"><a class="nm-link" href="index.html#work">← Index</a> &nbsp;/&nbsp; Project 02</span>
+    <h1 class="nm-display" style="grid-column:1 / span 10">An SO-101 arm, <span class="nm-em">taught by demonstration</span></h1>
+    <p class="nm-lede" style="grid-column:1 / span 7">An independent project with the LeRobot framework. I assembled and calibrated a 6-DOF SO-101 robot arm, recorded demonstrations by teleoperation, and trained an imitation-learning model to pick and place.</p>
+    <dl class="nm-specs" style="grid-column:9 / span 4"><div><dt>Type</dt><dd>Independent project</dd></div><div><dt>When</dt><dd>Feb 2025 — Now</dd></div><div><dt>Arm</dt><dd>SO-101 · 6 DOF</dd></div><div><dt>Stack</dt><dd>LeRobot · Python · imitation learning</dd></div></dl>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-bottom:var(--space-30)">
+    <div style="grid-column:1 / span 9;position:relative">
+      <figure class="nm-figure"><div class="nm-video" data-yt="SwgCQcvPMZM" style="background-image:url(https://i.ytimg.com/vi/SwgCQcvPMZM/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/SwgCQcvPMZM" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 00</span><span class="nm-cap">The finished setup: the leader arm teleoperates the follower.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>01</b></div>
+      <div class="nm-case-text">
+        <h2 class="nm-headline">Assembly: <span class="nm-em">building it to understand it</span></h2>
+        <p class="nm-body">I assembled and calibrated the 6-DOF SO-101 arm myself, building a hands-on understanding of kinematics and system calibration.</p>
+      </div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Degrees of freedom</dt><dd>6</dd></div><div><dt>Work</dt><dd>Assembly · calibration</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>02</b></div>
+      <div class="nm-case-text">
+        <h2 class="nm-headline">Data: <span class="nm-em">teleoperation, two cameras</span></h2>
+        <p class="nm-body">I implemented a LeRobot data pipeline: demonstrations are collected by teleoperation, and each trajectory is recorded from two independent cameras so the model sees the task from more than one view.</p>
+      </div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Collection</dt><dd>Teleoperation</dd></div><div><dt>Views</dt><dd>2 independent cameras</dd></div><div><dt>Recorded</dt><dd>Multi-view trajectories</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>03</b></div>
+      <div class="nm-case-text">
+        <h2 class="nm-headline">Training: <span class="nm-em">imitation learning</span></h2>
+        <p class="nm-body">I trained an imitation-learning model on 50 recorded episodes to perform pick-and-place.</p>
+      </div>
+      
+      <div class="nm-case-spec"><div class="nm-tile nm-ratio-1x1"><div class="nm-tile-dots" aria-hidden="true"></div><span class="nm-label">Imitation learning · pick-and-place</span><div><div class="nm-tile-num">50</div><span class="nm-label">Recorded episodes</span></div></div></div>
+    </div>
+  </section>
+
+    <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-sechead"><span class="nm-label">Outcome</span><h2>Result</h2></div>
+    <div class="nm-grid"><div style="grid-column:2 / span 8;position:relative"><figure class="nm-figure">
+          <div class="nm-figure-img  nm-ratio-16x9"><img src="images/so101-teleop.png" alt="Red SO-101 leader arm held by hand, driving a grey follower arm, with the recording laptop alongside" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 01</span><span class="nm-cap">Teleoperation: moving the red arm by hand drives the grey arm, while the laptop records the episode.</span></figcaption>
+        </figure>
+      <span class="nm-sticker" style="position:absolute;left:-14px;top:24px">50 episodes</span></div></div>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-18);border-top:1px solid var(--rule-strong)">
+    <span class="nm-label" style="grid-column:1 / span 3;padding-top:var(--space-3)">Next / 03</span>
+    <a class="nm-card" href="husky.html" style="grid-column:4 / span 9">
+      <div class="nm-card-meta" style="border-top:0;margin-top:0;padding-top:0"><span class="nm-label nm-card-no">03</span><h3 class="nm-card-title" style="font-size:clamp(40px,5vw,64px)">Wild Track: <i>Husky wildlife survey</i></h3><span class="nm-card-arrow" style="font-size:48px">→</span></div>
+    </a>
+  </section>
+
+</div>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('.nm-video[data-yt]');
+  if (!boxes.length) return;
+  function cmd(f, fn) { try { f.contentWindow.postMessage(JSON.stringify({event: 'command', func: fn, args: []}), '*'); } catch (e) {} }
+  function load(box) {
+    var id = box.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&loop=1&playlist=' + id + '&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';
+    f.title = 'Project video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.appendChild(f); box.classList.add('is-loaded'); return f;
+  }
+  boxes.forEach(load);
+})();
+</script>
+</body>
+</html>

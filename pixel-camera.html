@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESP32 pixel camera — Nhat Thien Mai</title>
+<meta name="description" content="A handheld ESP32 camera in a 3D-printed case that takes dithered, pixel-art photos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <span class="nm-mast-status nm-label">No. 05 / Pixel camera</span>
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#work" aria-current="page">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-12);row-gap:var(--space-8)">
+    <span class="nm-label" style="grid-column:1 / span 3"><a class="nm-link" href="index.html#work">← Index</a> &nbsp;/&nbsp; Project 05</span>
+    <h1 class="nm-display" style="grid-column:1 / span 10">A pocket camera that <span class="nm-em">shoots in dither</span></h1>
+    <p class="nm-lede" style="grid-column:1 / span 7">A personal build: a handheld ESP32 camera in a 3D-printed case, with an OLED screen and two buttons. It saves photos as ordered-dither pixel images. The self-portrait on the home page was taken with it.</p>
+    <dl class="nm-specs" style="grid-column:9 / span 4"><div><dt>Type</dt><dd>Personal build</dd></div><div><dt>Board</dt><dd>ESP32 camera</dd></div><div><dt>Interface</dt><dd>OLED · 2 buttons</dd></div><div><dt>Output</dt><dd>Bayer-dithered images · SD card</dd></div></dl>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-bottom:var(--space-30)">
+    <div style="grid-column:2 / span 6"><figure class="nm-figure">
+          <div class="nm-figure-img  nm-ratio-1x1"><img src="images/pixelcam-device.png" alt="Grey 3D-printed camera with an OLED reading Ready, two red buttons, connected by USB to a power bank" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 01</span><span class="nm-cap">The finished camera, ready to shoot, running off a USB power bank.</span></figcaption>
+        </figure></div>
+    <div style="grid-column:9 / span 4;margin-top:var(--space-18)"><figure class="nm-figure">
+          <div class="nm-figure-img nm-figure-img--contain nm-ratio-3x4"><img src="images/pixelcam-enclosure-cad.png" alt="Translucent CAD render of the enclosure showing the OLED, perfboard and two red buttons" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 02</span><span class="nm-cap">Enclosure CAD: perfboard, OLED and buttons inside the case.</span></figcaption>
+        </figure></div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-sechead">
+      <span class="nm-label">Photographs</span>
+      <h2>Shot <span class="nm-em">on it</span><sup>(03)</sup></h2>
+    </div>
+    <div class="nm-trip">
+      <figure class="nm-figure">
+          <div class="nm-figure-img  nm-ratio-3x4"><img src="images/portrait-dither.png" alt="1-bit dithered self-portrait" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 03</span><span class="nm-cap">Self-portrait, 1-bit black and white.</span></figcaption>
+        </figure>
+      <figure class="nm-figure">
+          <div class="nm-figure-img  nm-ratio-3x4"><img src="images/pixelcam-dither-colour.png" alt="Colour-dithered photo of a curved building ceiling" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 04</span><span class="nm-cap">Colour palette.</span></figcaption>
+        </figure>
+      <figure class="nm-figure">
+          <div class="nm-figure-img  nm-ratio-3x4"><img src="images/pixelcam-dither-indigo.png" alt="Two-tone indigo and cream dither of a car at dusk" loading="lazy"></div>
+          <figcaption><span class="nm-label">Fig. 05</span><span class="nm-cap">Two-tone indigo palette.</span></figcaption>
+        </figure>
+    </div>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-18);border-top:1px solid var(--rule-strong)">
+    <span class="nm-label" style="grid-column:1 / span 3;padding-top:var(--space-3)">Next / 06</span>
+    <a class="nm-card" href="ir.html" style="grid-column:4 / span 9">
+      <div class="nm-card-meta" style="border-top:0;margin-top:0;padding-top:0"><span class="nm-label nm-card-no">06</span><h3 class="nm-card-title" style="font-size:clamp(40px,5vw,64px)">Four arms that <i>cook dinner</i></h3><span class="nm-card-arrow" style="font-size:48px">→</span></div>
+    </a>
+  </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nhat Thien Mai — Mechatronics</title>
+<meta name="description" content="Portfolio of Nhat Thien Mai, Mechatronics Engineering student at UTS: robots, embedded systems and test-bench work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html#work">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <!-- HERO -->
+  <section class="nm-wrap nm-hero nm-grid">
+    <div class="nm-hero-folio">
+      <span class="nm-label">Undergraduate mechatronics engineering student / UTS / Sydney</span>
+    </div>
+    <h1 class="nm-hero-name"><span>Nhat Thien</span><span class="nm-indent">Mai</span></h1>
+    <figure class="nm-hero-figure nm-figure">
+      <div class="nm-portrait nm-ratio-3x4"><img src="images/portrait-dither.png" alt="Self-portrait, 1-bit dither, taken on a home-built ESP32 camera"></div>
+    </figure>
+    <div class="nm-hero-intro">
+      <p class="nm-lede">Third-year mechatronics engineering student at the University of Technology Sydney. I take hardware <span class="nm-em">from CAD and force analysis</span> through prototyping, wiring, firmware and the test bench.</p>
+      <p class="nm-lede" style="color:var(--graphite)">Currently an R&amp;D engineering intern at UTS Tech Lab, running bench experiments on a multi-channel fibre-optic sensing chain.</p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="nm-wrap" id="work" style="padding-bottom:var(--space-30)">
+    <div class="nm-sechead">
+      <span class="nm-label">Index / 01</span>
+      <h2>Projects<sup>(06)</sup></h2>
+      <span class="nm-sechead-note nm-label">2025 — 2026</span>
+    </div>
+    <div class="nm-mosaic">
+      <a class="nm-mtile" href="warman.html" style="grid-column:1 / 7;grid-row:1 / 12"><img src="images/warman-delivery.png" alt="Warman robot tipping its rocks into the delivery box" style="object-position:50% 50%" loading="lazy"><span class="nm-sticker">3rd · 240 pts</span><span class="nm-mtile-cap"><span class="nm-mtile-no">01</span><span><b>Warman 2026:</b> a lifting arm that reaches 720 mm</span></span></a>
+      <a class="nm-mtile" href="husky.html" style="grid-column:7 / 13;grid-row:1 / 8"><img src="images/husky-overview.jpg" alt="Thermal view, colour check and survey map from Wild Track" style="object-position:50% 40%" loading="lazy"><span class="nm-sticker">87 / 90 boars</span><span class="nm-mtile-cap"><span class="nm-mtile-no">03</span><span><b>Wild Track:</b> Husky wildlife survey</span></span></a>
+      <a class="nm-mtile" href="fire-rescue.html" style="grid-column:7 / 10;grid-row:8 / 12"><img src="images/fire-rescue-wiring.png" alt="STM32 board wired to a breadboard of sensors and LEDs" style="object-position:50% 50%" loading="lazy"><span class="nm-sticker nm-sticker--solder">1st place</span><span class="nm-mtile-cap"><span class="nm-mtile-no">04</span><span><b>STM32</b> fire rescue system</span></span></a>
+      <a class="nm-mtile" href="pixel-camera.html" style="grid-column:10 / 13;grid-row:8 / 12"><img src="images/pixelcam-device.png" alt="3D-printed ESP32 camera with OLED reading Ready" style="object-position:30% 60%" loading="lazy"><span class="nm-mtile-cap"><span class="nm-mtile-no">05</span><span><b>ESP32</b> pixel camera</span></span></a>
+      <a class="nm-mtile" href="so101.html" style="grid-column:1 / 4;grid-row:12 / 18"><img src="images/so101-teleop-hand.webp" alt="Hand guiding the red SO-101 leader arm while the follower grips a toy" style="object-position:40% 50%" loading="lazy"><span class="nm-mtile-cap"><span class="nm-mtile-no">02</span><span><b>SO-101 arm,</b> taught by demonstration</span></span></a>
+      <a class="nm-mtile" href="ir.html" style="grid-column:4 / 13;grid-row:12 / 18"><img src="images/ir-kitchen.webp" alt="Simulated robot kitchen with four arms behind safety fencing" style="object-position:50% 60%" loading="lazy"><span class="nm-mtile-cap"><span class="nm-mtile-no">06</span><span><b>Four arms</b> that cook dinner</span></span></a>
+    </div>
+  </section>
+
+</div>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('.nm-video[data-yt]');
+  if (!boxes.length) return;
+  function cmd(f, fn) { try { f.contentWindow.postMessage(JSON.stringify({event: 'command', func: fn, args: []}), '*'); } catch (e) {} }
+  function load(box) {
+    var id = box.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&loop=1&playlist=' + id + '&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';
+    f.title = 'Project video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.appendChild(f); box.classList.add('is-loaded'); return f;
+  }
+  boxes.forEach(load);
+})();
+</script>
+</body>
+</html>

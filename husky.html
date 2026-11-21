@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wild Track — Nhat Thien Mai</title>
+<meta name="description" content="Wild Track: a simulated Husky robot that surveys a forest, finds heat sources with a thermal camera and confirms feral boars with YOLO11s. 87 of 90 boars confirmed across 18 missions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <span class="nm-mast-status nm-label">No. 03 / Wild Track</span>
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#work" aria-current="page">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-12);row-gap:var(--space-8)">
+    <span class="nm-label" style="grid-column:1 / span 3"><a class="nm-link" href="index.html#work">← Index</a> &nbsp;/&nbsp; Project 03</span>
+    <h1 class="nm-display" style="grid-column:1 / span 10">Wild Track: a Husky that finds feral boars <span class="nm-em">by their heat</span></h1>
+    <p class="nm-lede" style="grid-column:1 / span 7">Robotics Studio 1, team of five. A Husky ground robot in a simulated forest maps the area, flags every warm object with a thermal camera, drives in close and decides with YOLO whether it is an exotic boar or a native deer or kangaroo. I led perception: the thermal camera, the heat-source detector, the YOLO model and the verification logic.</p>
+    <dl class="nm-specs" style="grid-column:9 / span 4"><div><dt>Role</dt><dd>Perception lead · team of 5</dd></div><div><dt>When</dt><dd>Aug — Nov 2026</dd></div><div><dt>Stack</dt><dd>ROS 2 Humble · Gazebo Fortress · YOLO11s · Python</dd></div><div><dt>Result</dt><dd>87 / 90 boars confirmed · no false boar reports</dd></div></dl>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-bottom:var(--space-18)">
+    <div style="grid-column:1 / span 9;position:relative"><figure class="nm-figure"><div class="nm-video" data-yt="oBOc9h9AF5E" style="background-image:url(https://i.ytimg.com/vi/oBOc9h9AF5E/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/oBOc9h9AF5E" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 00</span><span class="nm-cap">The finished system: a full autonomous survey mission, start to MISSION COMPLETE.</span></figcaption></figure>
+    </div>
+    <div style="grid-column:10 / span 3;align-self:end">
+      <div class="nm-hero-actions" style="flex-direction:column;align-items:flex-start;margin-top:0">
+        <a class="nm-btn nm-btn--ghost" href="https://youtu.be/_3ewNtgGpY0" target="_blank" rel="noopener">Animals behind trees ↗</a>
+        <a class="nm-btn nm-btn--ghost" href="https://github.com/honglinhnguyen-alt/Robotic_Studio1" target="_blank" rel="noopener">GitHub Repository ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>01</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">The brief: <span class="nm-em">miss as few boars as possible</span></h2><p class="nm-body">Feral pigs damage native bushland, and foot surveys are slow and easy to miss in dense forest. Our stakeholder, a park ranger, set one priority: miss as few exotic animals as possible, and keep a clear record of anything the robot cannot confirm instead of guessing.</p><p class="nm-body">The robot explores on its own with LiDAR and SLAM, pauses whenever the thermal camera finds something warm, drives to an observation point, classifies it, then carries on. When exploration ends it sweeps any area the thermal camera has not seen yet and returns to its start point.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>World</dt><dd>90 trees · 5 boars · 4 deer · 3 kangaroos · 2 campfires</dd></div><div><dt>Temperatures</dt><dd>Ground 293 K · trees 300 K · animals 322–328 K · fire 330 K</dd></div><div><dt>Sensors</dt><dd>LiDAR · RGB-D · thermal · IMU</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-ratio-3x4"><img src="images/husky-world.jpg" alt="Top-down view of the simulated forest ringed by cliffs" loading="lazy"></div><figcaption><span class="nm-label">Fig. 02</span><span class="nm-cap">The Gazebo forest: cliffs close the boundary so exploration can finish.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9"><img src="images/husky-layouts.png" alt="Three heat-source layouts used for testing" loading="lazy"></div><figcaption><span class="nm-label">Fig. 03</span><span class="nm-cap">Test layouts: the fixed world, random layouts, and animals placed 1–2 m from trees.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>02</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Finding heat: <span class="nm-em">a threshold that moves with the scene</span></h2><p class="nm-body">I added a 320 × 240, 60°, 10 Hz thermal camera to the Husky and wrote <code>thermal_candidate_detector</code>. Each frame it estimates the background from the 75th percentile of pixel temperatures and marks pixels at least 10 K warmer as hot. A 3 × 3 opening and closing removes noise, regions under 30 px are dropped, and each region must also beat its own surroundings by 10 K.</p><p class="nm-body">A region is only published after it appears in three consecutive frames, and it keeps the same ID while it is tracked. The detector went through four versions: a 3–5 K margin fired on sun-warmed trees, a fixed 315 K cut-off missed cooler animals, and a median background dropped when cold sky filled the frame, which pulled in tree pixels. Moving to the 75th percentile cut the localiser’s mean error from 0.71 m to 0.37 m.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Hot pixel</dt><dd>≥ 10 K above 75th-percentile background</dd></div><div><dt>Min region</dt><dd>30 px · 3 consecutive frames</dd></div><div><dt>Error fix</dt><dd>0.71 m → 0.37 m</dd></div></dl>
+      <div class="nm-case-wide"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9"><img src="images/husky-thermal-rgb.jpg" alt="Thermal detections of a boar, kangaroo and campfire above the matching colour-camera verification" loading="lazy"></div><figcaption><span class="nm-label">Fig. 04</span><span class="nm-cap">Top: thermal detections of a boar, a kangaroo and a campfire. Bottom: the colour check. The boar is confirmed exotic, the kangaroo native, the campfire left unresolved.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>03</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Naming it: <span class="nm-em">YOLO, but only after five frames agree</span></h2><p class="nm-body">Heat alone cannot tell a boar from a deer or a campfire, so the robot drives in and asks YOLO. I captured about 1,200 images from the Husky’s own camera in Gazebo, labelled 2,223 boxes in Label Studio and fine-tuned YOLO11s for 60 epochs. On 120 held-out images it reached 93% precision, 92% recall and 95.5% mAP50.</p><p class="nm-body">At runtime, <code>animal_yolo_detector</code> maps the thermal box onto the wider colour image and only accepts a YOLO box that matches it. Frame pairs are discarded if the two cameras are more than 0.15 s apart or the robot is turning faster than 0.35 rad/s (about 3° between captures). A species is confirmed only when it wins three of five frames at a mean confidence of 0.70 or more. Otherwise the robot moves closer (3.5, 3.0, then 2.5 m) and tries again, and after three attempts it records the source as unresolved, with the reason: too far, partly in view, or no trained animal seen.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Dataset</dt><dd>1,200 images · 2,223 boxes</dd></div><div><dt>Validation</dt><dd>P 93% · R 92% · mAP50 95.5%</dd></div><div><dt>Confirm</dt><dd>3 of 5 frames · mean conf ≥ 0.70</dd></div><div><dt>Too far</dt><dd>< 18 px tall (≈ 9 m)</dd></div></dl>
+      <div class="nm-case-wide"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9"><img src="images/husky-perception-nodes.png" alt="ROS 2 node diagram: thermal_candidate_detector and animal_yolo_detector with their topics and the verify_now service" loading="lazy"></div><figcaption><span class="nm-label">Fig. 05</span><span class="nm-cap">My two perception nodes (purple) and how they connect to localisation, the mission node and the operator GUI.</span></figcaption></figure></div>
+      <div class="nm-case-wide nm-vone"><figure class="nm-figure"><div class="nm-video" data-yt="S2HY-KlAlA0" style="background-image:url(https://i.ytimg.com/vi/S2HY-KlAlA0/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/S2HY-KlAlA0" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 01</span><span class="nm-cap">First run of the perception pipeline: thermal detection, then YOLO11s verification.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>04</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Testing: <span class="nm-em">18 missions against ground truth</span></h2><p class="nm-body">I wrote 16 unit tests for the perception code and ran the evaluation batches: 12 missions on 19 October and 18 on 2 November, six each on the fixed world, random layouts and animals hidden beside trees. Each run had 14 heat sources. I produced the results tables, the confusion matrix and the figures for the final report.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Boars confirmed exotic</dt><dd>87 / 90 (97%)</dd></div><div><dt>Exotic reports correct</dt><dd>87 / 87</dd></div><div><dt>Heat sources found</dt><dd>244 / 252 (96.8%)</dd></div><div><dt>Location error</dt><dd>0.30 m mean · 243 / 244 within 1 m</dd></div><div><dt>Missions</dt><dd>18 / 18 complete · 17 / 18 home</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/husky-loc-error.png" alt="Scatter of localisation error per heat source by scenario" loading="lazy"></div><figcaption><span class="nm-label">Fig. 06</span><span class="nm-cap">Localisation error for every matched heat source, against the 1 m limit.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/husky-gui.jpg" alt="Operator interface at mission complete with map, thermal view, camera and results table" loading="lazy"></div><figcaption><span class="nm-label">Fig. 07</span><span class="nm-cap">The operator view at MISSION COMPLETE, with my thermal and YOLO pane in the middle.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>05</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">What it got wrong: <span class="nm-em">campfires</span></h2><p class="nm-body">The campfires were there on purpose: warm, but not animals. 26 of 36 were correctly left unresolved, but 9 were labelled as native animals (8 kangaroos, 1 deer). None was ever called a boar. My validation set only contained the three trained classes, so a 95.5% score said nothing about objects the model had never seen. Animals standing beside trees were also found less often (93% against 99%).</p><p class="nm-body">The fix I would build next is a second check before accepting a label: is this surface temperature, shape and size plausible for that species? Plus a test set that deliberately includes things the model was never trained on.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Campfires</dt><dd>26 unresolved · 9 mislabelled · 1 missed</dd></div><div><dt>Occlusion</dt><dd>recall 0.93 vs 0.99</dd></div></dl>
+      
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>06</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">What I would explore next</h2><p class="nm-body">Three questions came out of this project: tracking an animal that moves behind a tree and reappears; rejecting heat sources the model was never trained on instead of labelling them; and using reinforcement learning to let the Husky choose a better viewpoint when YOLO’s votes disagree.</p></div>
+      
+      
+    </div>
+  </section>
+
+    <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-sechead"><span class="nm-label">Outcome</span><h2>Result</h2></div>
+    <div class="nm-grid"><div style="grid-column:2 / span 8;position:relative"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9"><img src="images/husky-overview.jpg" alt="Thermal view of a boar and deer, colour view confirming the boar, and the final survey map with exotic, native and unresolved markers" loading="lazy"></div><figcaption><span class="nm-label">Fig. 01</span><span class="nm-cap">One survey: (a) the thermal camera flags a boar and a deer, (b) YOLO confirms the boar as exotic, (c) the final map marks every animal found.</span></figcaption></figure>
+      <span class="nm-sticker" style="position:absolute;right:-18px;top:28px">18 missions</span></div></div>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-18);border-top:1px solid var(--rule-strong)">
+    <span class="nm-label" style="grid-column:1 / span 3;padding-top:var(--space-3)">Next / 04</span>
+    <a class="nm-card" href="fire-rescue.html" style="grid-column:4 / span 9">
+      <div class="nm-card-meta" style="border-top:0;margin-top:0;padding-top:0"><span class="nm-label nm-card-no">04</span><h3 class="nm-card-title" style="font-size:clamp(32px,4vw,56px)">STM32 smart <i>fire rescue</i> system</h3><span class="nm-card-arrow" style="font-size:48px">→</span></div>
+    </a>
+  </section>
+</div>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('.nm-video[data-yt]');
+  if (!boxes.length) return;
+  function cmd(f, fn) { try { f.contentWindow.postMessage(JSON.stringify({event: 'command', func: fn, args: []}), '*'); } catch (e) {} }
+  function load(box) {
+    var id = box.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&loop=1&playlist=' + id + '&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';
+    f.title = 'Project video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.appendChild(f); box.classList.add('is-loaded'); return f;
+  }
+  boxes.forEach(load);
+})();
+</script>
+</body>
+</html>

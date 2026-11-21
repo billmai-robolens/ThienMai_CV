@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warman 2026 — Nhat Thien Mai</title>
+<meta name="description" content="Warman Design and Build 2026: a telescopic lifting and luffing mechanism that reaches over 720 mm. Equal third of the semester with 240 points.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="nm" id="top">
+  <div class="nm-wrap">
+    <header class="nm-mast">
+      <span class="nm-mast-status nm-label">No. 01 / Warman 2026</span>
+      <nav class="nm-mast-nav nm-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#work" aria-current="page">Projects</a>
+        <a href="https://drive.google.com/file/d/1OJMmLm8U8ivecN6BhH8PJnnP1VrDxSXQ/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-12);row-gap:var(--space-8)">
+    <span class="nm-label" style="grid-column:1 / span 3"><a class="nm-link" href="index.html#work">← Index</a> &nbsp;/&nbsp; Project 01</span>
+    <h1 class="nm-display" style="grid-column:1 / span 10">A telescopic arm that reaches <span class="nm-em">720 mm</span> and still fits in a 400 mm cube</h1>
+    <p class="nm-lede" style="grid-column:1 / span 7">Weir Warman Design and Build Competition 2026. Team B.L.E.E.K, five students, built the Two-Way Excavator. As mechatronic lead I owned the lifting and luffing mechanism from concept to competition: sketches, scoring, SolidWorks, force analysis, prototypes, wiring and the Arduino control sequence.</p>
+    <dl class="nm-specs" style="grid-column:9 / span 4"><div><dt>Role</dt><dd>Mechatronic lead · lifting mechanism</dd></div><div><dt>When</dt><dd>Jan — Jul 2026</dd></div><div><dt>Result</dt><dd>Equal 3rd of the semester · 240 pts</dd></div><div><dt>Stack</dt><dd>SolidWorks · Arduino Mega · BTS7960 · L298N · 3D printing</dd></div></dl>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-bottom:var(--space-18)">
+    <div style="grid-column:1 / -1;position:relative"><figure class="nm-figure"><div class="nm-video" data-yt="JntYOMQP3uE" style="background-image:url(https://i.ytimg.com/vi/JntYOMQP3uE/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/JntYOMQP3uE" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 00</span><span class="nm-cap">UTS university round: the full competition runs.</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>01</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">The brief: <span class="nm-em">six rocks, 120 seconds, one button</span></h2><p class="nm-body">Project REEP: start from a single action inside a 400 mm cube, collect six 3D-printed rocks from a randomly loaded dump zone, carry them up a ramp and drop them into a 100 mm hopper, all within 120 seconds and under 6 kg.</p><p class="nm-body">Before the first class I modelled the whole track in SolidWorks so I could design against the real geometry, and printed the rocks at home so the team could test anywhere, not only on the university track.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Start size</dt><dd>400 mm cube</dd></div><div><dt>Time</dt><dd>120 s</dd></div><div><dt>Mass</dt><dd>≤ 6 kg</dd></div><div><dt>Payload</dt><dd>6 rocks · ground → hopper</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-track-cad.jpg" alt="SolidWorks model of the Warman track with ramp, platforms and hopper" loading="lazy"></div><figcaption><span class="nm-label">Fig. 02</span><span class="nm-cap">The full track, modelled before week 1.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-1x1"><img src="images/warman-printed-rocks.jpg" alt="Green rocks printing on a Bambu Lab printer" loading="lazy"></div><figcaption><span class="nm-label">Fig. 03</span><span class="nm-cap">Competition rocks printed at home for off-track testing.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>02</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Choosing a mechanism: <span class="nm-em">six concepts, one matrix</span></h2><p class="nm-body">I sketched six ways to lift and reach: rack and pinion, telescopic crane, telescopic cable drive, scissor lift, lead screw and a robotic arm. A 3-DOF arm looked best on paper until I measured it: the links were far longer than the start cube allowed.</p><p class="nm-body">Each concept was scored on seven weighted criteria: compactness, reach, stability, manufacturing, integration, reliability and speed. The motor-driven telescopic cable drive with linear actuators for the angle scored 79, ahead of the crane (66) and the arm (63).</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Winner</dt><dd>Telescopic cable drive · 79</dd></div><div><dt>Runners-up</dt><dd>Crane 66 · arm 63 · rack 58</dd></div><div><dt>Last</dt><dd>Lead screw 50 · scissor 48</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-concept-sketch.jpg" alt="Hand sketches of the telescopic cable-drive concept" loading="lazy"></div><figcaption><span class="nm-label">Fig. 04</span><span class="nm-cap">The selected concept: a pulley-driven telescopic rail, angled by linear actuators.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-scoring-matrix.jpg" alt="Weighted scoring matrix comparing six concepts" loading="lazy"></div><figcaption><span class="nm-label">Fig. 05</span><span class="nm-cap">Weighted scoring matrix across seven criteria.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>03</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Sizing the actuators: <span class="nm-em">moments about the pivot</span></h2><p class="nm-body">I drew the free-body diagram of the extended arm and took moments about the base pivot, using geometry from SolidWorks and masses weighed from the prototype: 0.36 kg at the cable drive, 1.5 kg of extension and 1.8 kg of pick-up head with rocks. Holding the arm needs 91.9 N; across the motion the load runs from 91.9 N to 242 N, so I chose two 150 N actuators (300 N).</p><p class="nm-body">A parametric study showed actuator force rises about 35 N per kilogram of payload but only 0.1 N per millimetre of reach, so cutting head mass mattered far more than shortening the arm. My first hand calculation gave 500 N; checking it found the wrong moment arm, a perpendicular-distance error I now look for first.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Static hold</dt><dd>91.9 N</dd></div><div><dt>Operating range</dt><dd>91.9 – 242 N</dd></div><div><dt>Selected</dt><dd>2 × 150 N actuators</dd></div><div><dt>Sensitivity</dt><dd>35 N/kg vs 0.1 N/mm</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-fbd.jpg" alt="Hand-drawn free-body diagram of the lifting arm" loading="lazy"></div><figcaption><span class="nm-label">Fig. 06</span><span class="nm-cap">Free-body diagram: pivot A, cable drive B, actuator C, arm D and payload E.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-1x1"><img src="images/warman-force-calc.jpg" alt="Spreadsheet of actuator force calculation with two parametric charts" loading="lazy"></div><figcaption><span class="nm-label">Fig. 07</span><span class="nm-cap">Force calculation and the payload-mass and reach sweeps.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>04</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Prototype, break, fix: <span class="nm-em">three problems the CAD did not show</span></h2><p class="nm-body">A cardboard prototype with 330 mm stages reached about 889 mm, but retracted it measured 440 mm, over the 400 mm cube. I cut the stages to 270 mm and worked with the chassis designer to raise the base so the reach still worked.</p><p class="nm-body">The T-slot profile in my CAD was not available and was over budget, so I switched to the aluminium profile in the lab, cut it to length and re-modelled it from a photo of its cross-section. On the first real build the heavy head twisted the stages out of line and they jammed, so I designed 3D-printed guides between stages to hold vertical alignment. The sliding became smooth and the drive motor needed less torque.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Stage length</dt><dd>330 mm → 270 mm</dd></div><div><dt>Retracted</dt><dd>440 mm → fits 400 mm cube</dd></div><div><dt>Fix</dt><dd>3D-printed inter-stage guides</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-1x1"><img src="images/warman-cardboard.jpg" alt="Cardboard telescopic prototype held at full extension" loading="lazy"></div><figcaption><span class="nm-label">Fig. 08</span><span class="nm-cap">Low-fidelity cardboard prototype at full extension.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-guide.jpg" alt="Close-up of the green 3D-printed guide between aluminium stages" loading="lazy"></div><figcaption><span class="nm-label">Fig. 09</span><span class="nm-cap">The guide part that stopped the stages twisting under load.</span></figcaption></figure></div>
+      <div class="nm-case-wide nm-vpair"><figure class="nm-figure"><div class="nm-video" data-yt="hV3RxtYh7tA" style="background-image:url(https://i.ytimg.com/vi/hV3RxtYh7tA/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/hV3RxtYh7tA" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 01</span><span class="nm-cap">The lifting mechanism extending and luffing on the bench.</span></figcaption></figure><figure class="nm-figure"><div class="nm-video" data-yt="ctctOphHXEo" style="background-image:url(https://i.ytimg.com/vi/ctctOphHXEo/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/ctctOphHXEo" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 02</span><span class="nm-cap">SolidWorks animation of the lift reaching from dump zone to hopper.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>05</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Wiring it for repeatability</h2><p class="nm-body">Each linear actuator stalls above 1 A, so in parallel they exceed what an L298N can supply. I drove them from a BTS7960 and the extension motor from an L298N, all on an Arduino Mega. Breadboard wires kept shaking loose, so we moved every connection to Wago connectors and mounted the electronics on a 3D-printed magnetic base that held through every run but still lifts off for repairs.</p><p class="nm-body">To make runs repeatable I made a laser-cut ruler that places the robot 325 mm from the collection zone, the distance that gave the best pick-up in testing, and an Arduino checklist sketch that exercises every motor and servo before a run.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Actuators</dt><dd>BTS7960 driver</dd></div><div><dt>Extension motor</dt><dd>L298N driver</dd></div><div><dt>Start position</dt><dd>325 mm ruler</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-wiring-test.jpg" alt="Lifting mechanism raised on the bench with drivers and Arduino wired" loading="lazy"></div><figcaption><span class="nm-label">Fig. 10</span><span class="nm-cap">Bench test of the lift with the BTS7960 and L298N drivers.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-1x1"><img src="images/warman-magnet-base.jpg" alt="Green 3D-printed electronics base being fitted into the chassis" loading="lazy"></div><figcaption><span class="nm-label">Fig. 11</span><span class="nm-cap">The 3D-printed magnetic base for the drivers, Mega and battery.</span></figcaption></figure></div>
+      <div class="nm-case-wide nm-vone"><figure class="nm-figure"><div class="nm-video" data-yt="PlZ8KIf6bwM" style="background-image:url(https://i.ytimg.com/vi/PlZ8KIf6bwM/hqdefault.jpg)"><a class="nm-video-fallback" href="https://youtu.be/PlZ8KIf6bwM" target="_blank" rel="noopener">Watch on YouTube ↗</a></div><figcaption><span class="nm-label">Vid. 03</span><span class="nm-cap">First test run after integrating the lift into the chassis.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>06</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Validation: <span class="nm-em">every requirement, measured</span></h2><p class="nm-body">Before the competition I checked the integrated robot against each requirement: 5.71 kg on the scale (limit 6 kg), retracted inside the 400 mm cube frame, all six rocks collected from the dump zone, and enough reach and angle to put the head over the hopper.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Mass</dt><dd>5.71 kg (≤ 6 kg)</dd></div><div><dt>Start size</dt><dd>fits 400 mm cube</dd></div><div><dt>Reach</dt><dd>hopper reached</dd></div></dl>
+      <div class="nm-case-wide"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9"><img src="images/warman-validation.jpg" alt="Four test photos: robot on scale, inside the cube frame, collecting rocks, reaching the hopper" loading="lazy"></div><figcaption><span class="nm-label">Fig. 12</span><span class="nm-cap">Mass, start-cube, collection and hopper-reach checks.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-30)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>07</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">Competition day: <span class="nm-em">one timing change</span></h2><p class="nm-body">The morning checklist caught a dead linear actuator; the labelled Wago wiring made it quick to fix. In round one the actuator extended while the arm was still sliding out, the moment lifted the front of the robot, and we collected four rocks (120 pts).</p><p class="nm-body">Between rounds we changed the code to delay the actuator until the extension finished. In round two the robot stayed flat and collected all six (180 pts). We stopped before the ramp because hand-built wheel mounts had left the chassis misaligned and the climb was unsafe. 240 points in total: equal third of the semester.</p></div>
+      <dl class="nm-case-spec nm-specs"><div><dt>Round 1</dt><dd>4 rocks · 120 pts</dd></div><div><dt>Round 2</dt><dd>6 rocks · 180 pts</dd></div><div><dt>Total</dt><dd>240 pts · equal 3rd</dd></div></dl>
+      <div class="nm-case-left"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-3x2"><img src="images/warman-round1-tilt.jpg" alt="Robot front lifting off the track in round one" loading="lazy"></div><figcaption><span class="nm-label">Fig. 13</span><span class="nm-cap">Round one: the early actuator move tips the front up.</span></figcaption></figure><figure class="nm-figure" style="margin-top:var(--space-8)"><div class="nm-figure-img nm-figure-img--contain" style="aspect-ratio:1761/561 !important"><img src="images/warman-round2.jpg" alt="The robot holding all six rocks in round two, level on the track" loading="lazy"></div><figcaption><span class="nm-label">Fig. 13b</span><span class="nm-cap">Round two: with the actuator delayed, the robot stays level and collects all six rocks.</span></figcaption></figure></div><div class="nm-case-right"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-1x1"><img src="images/warman-final-robot.jpg" alt="The finished Two-Way Excavator on the bench" loading="lazy"></div><figcaption><span class="nm-label">Fig. 14</span><span class="nm-cap">The finished Two-Way Excavator.</span></figcaption></figure></div>
+    </div>
+  </section>
+
+  <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-case">
+      <div class="nm-case-no"><span class="nm-label">Section</span><b>08</b></div>
+      <div class="nm-case-text"><h2 class="nm-headline">What I would change</h2><p class="nm-body">A continuous-track chassis for a steadier ramp climb, and 3D-printed motor mounts with fixed holes so the wheels line up. Most of all, integrate the full robot earlier: every serious problem here, from the oversized start pose to the tipping, only appeared once the subsystems were joined.</p></div>
+      
+      
+    </div>
+  </section>
+
+    <section class="nm-wrap" style="padding-bottom:var(--space-18)">
+    <div class="nm-sechead"><span class="nm-label">Outcome</span><h2>Result</h2></div>
+    <div class="nm-grid"><div style="grid-column:2 / span 8;position:relative"><figure class="nm-figure"><div class="nm-figure-img nm-figure-img--contain nm-ratio-16x9" style="aspect-ratio:1761/561 !important"><img src="images/warman-round2.jpg" alt="The robot collecting all six rocks in the second competition round" loading="lazy"></div><figcaption><span class="nm-label">Fig. 01</span><span class="nm-cap">Round two: all six rocks collected and held in the storage body.</span></figcaption></figure>
+      <span class="nm-seal" style="position:absolute;right:-36px;top:-36px"><strong>3<sup>rd</sup></strong><span>Equal · 240 pts</span></span></div></div>
+  </section>
+
+  <section class="nm-wrap nm-grid" style="padding-top:var(--space-12);padding-bottom:var(--space-18);border-top:1px solid var(--rule-strong)">
+    <span class="nm-label" style="grid-column:1 / span 3;padding-top:var(--space-3)">Next / 02</span>
+    <a class="nm-card" href="so101.html" style="grid-column:4 / span 9">
+      <div class="nm-card-meta" style="border-top:0;margin-top:0;padding-top:0"><span class="nm-label nm-card-no">02</span><h3 class="nm-card-title" style="font-size:clamp(32px,4vw,56px)">SO-101 arm, <i>taught by demonstration</i></h3><span class="nm-card-arrow" style="font-size:48px">→</span></div>
+    </a>
+  </section>
+</div>
+<script>
+(function () {
+  var boxes = document.querySelectorAll('.nm-video[data-yt]');
+  if (!boxes.length) return;
+  function cmd(f, fn) { try { f.contentWindow.postMessage(JSON.stringify({event: 'command', func: fn, args: []}), '*'); } catch (e) {} }
+  function load(box) {
+    var id = box.getAttribute('data-yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=1&loop=1&playlist=' + id + '&playsinline=1&rel=0&modestbranding=1&enablejsapi=1';
+    f.title = 'Project video';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.appendChild(f); box.classList.add('is-loaded'); return f;
+  }
+  boxes.forEach(load);
+})();
+</script>
+</body>
+</html>
